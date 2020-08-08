@@ -5,14 +5,14 @@ import { retry, catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PartidoServiceService {
 
   // Http Options
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     })
   };
 
@@ -24,13 +24,10 @@ export class PartidoServiceService {
     return this.http.get<any[]>(environment.api + '/partido')
       .pipe(
         retry(1),
-        catchError(this.handleError)
+        catchError(this.handleError),
       );
   }
 
-
-
-  
 
   handleError(error) {
     let errorMessage = '';
@@ -42,7 +39,4 @@ export class PartidoServiceService {
     window.alert(errorMessage);
     return throwError(errorMessage);
   }
-
-
-
 }
