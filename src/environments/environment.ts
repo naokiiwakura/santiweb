@@ -10,4 +10,5 @@
 
 export const environment = {
   production: false,
+  api: 'https://santi-api.herokuapp.com/api',
 };
