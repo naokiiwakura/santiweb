@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'ngx-candidato',
   templateUrl: './candidato.component.html',
-  styleUrls: ['./candidato.component.scss']
+  styleUrls: ['./candidato.component.scss'],
 })
 export class CandidatoComponent implements OnInit {
 

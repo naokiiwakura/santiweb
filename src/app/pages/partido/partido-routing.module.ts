@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { PartidoComponent } from './partido.component';
 import { Routes, RouterModule } from '@angular/router';
 import { PartidoListarComponent } from './partido-listar/partido-listar.component';

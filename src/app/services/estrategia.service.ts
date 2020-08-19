@@ -43,16 +43,16 @@ export class EstrategiaService {
       );
   }
 
-  cadastrar(partido: any) {
-    return this.http.post<any>(environment.api + '/estrategia/', partido)
+  cadastrar(estrategia: any) {
+    return this.http.post<any>(environment.api + '/estrategia/', estrategia)
       .pipe(
         retry(1),
         catchError(this.handleError),
       );
   }
 
-  editar(partido: any) {
-    return this.http.put<any>(environment.api + '/estrategia/' + partido.id, partido)
+  editar(estrategia: any) {
+    return this.http.put<any>(environment.api + '/estrategia/' + estrategia.id, estrategia)
       .pipe(
         retry(1),
         catchError(this.handleError),
