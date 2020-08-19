@@ -7,7 +7,6 @@ import { ECommerceComponent } from './e-commerce/e-commerce.component';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
 import { SantinhoComponent } from './santinho/santinho.component';
 import { CandidatoComponent } from './candidato/candidato.component';
-import { PartidoComponent } from './partido/partido.component';
 import { EstrategiaComponent } from './estrategia/estrategia.component';
 import { ColinhaComponent } from './colinha/colinha.component';
 

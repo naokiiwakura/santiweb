@@ -20,7 +20,6 @@ import {
   NbToastrModule,
   NbWindowModule,
   NbCardModule,
-  NbLayoutModule,
 } from '@nebular/theme';
 
 @NgModule({
