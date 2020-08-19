@@ -5,6 +5,11 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ECommerceComponent } from './e-commerce/e-commerce.component';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
+import { SantinhoComponent } from './santinho/santinho.component';
+import { CandidatoComponent } from './candidato/candidato.component';
+import { PartidoComponent } from './partido/partido.component';
+import { EstrategiaComponent } from './estrategia/estrategia.component';
+import { ColinhaComponent } from './colinha/colinha.component';
 
 const routes: Routes = [{
   path: '',
@@ -17,6 +22,27 @@ const routes: Routes = [{
     {
       path: 'iot-dashboard',
       component: DashboardComponent,
+    },
+    {
+      path: 'santinho',
+      component: SantinhoComponent,
+    },
+    {
+      path: 'candidato',
+      component: CandidatoComponent,
+    },
+    {
+      path: 'partido',
+      loadChildren: () => import('./partido/partido.module')
+        .then(m => m.PartidoModule),
+    },
+    {
+      path: 'estrategia',
+      component: EstrategiaComponent,
+    },
+    {
+      path: 'colinha',
+      component: ColinhaComponent,
     },
     {
       path: 'layout',

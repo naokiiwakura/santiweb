@@ -48,6 +48,26 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'edit-2-outline',
     children: [
       {
+        title: 'Candidato',
+        link: '/pages/candidato',
+      },
+      {
+        title: 'Partido',
+        link: '/pages/partido/listar',
+      },
+      {
+        title: 'Estrategia',
+        link: '/pages/estrategia',
+      },
+      {
+        title: 'Colinha',
+        link: '/pages/colinha',
+      },
+      {
+        title: 'Santinho',
+        link: '/pages/santinho',
+      },
+      {
         title: 'Form Inputs',
         link: '/pages/forms/inputs',
       },

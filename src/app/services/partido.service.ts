@@ -7,7 +7,7 @@ import { throwError } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class PartidoServiceService {
+export class PartidoService {
 
   // Http Options
   httpOptions = {
@@ -19,7 +19,6 @@ export class PartidoServiceService {
   constructor(private http: HttpClient) { }
 
 
-
   listarPartidos() {
     return this.http.get<any[]>(environment.api + '/partido')
       .pipe(
@@ -28,6 +27,37 @@ export class PartidoServiceService {
       );
   }
 
+  buscarPorId(id: number) {
+    return this.http.get<any>(environment.api + '/partido/' + id)
+      .pipe(
+        retry(1),
+        catchError(this.handleError),
+      );
+  }
+
+  excluir(id: number) {
+    return this.http.delete<string>(environment.api + '/partido/' + id)
+      .pipe(
+        retry(1),
+        catchError(this.handleError),
+      );
+  }
+
+  cadastrar(partido: any) {
+    return this.http.post<any>(environment.api + '/partido/', partido)
+      .pipe(
+        retry(1),
+        catchError(this.handleError),
+      );
+  }
+
+  editar(partido: any) {
+    return this.http.put<any>(environment.api + '/partido/' + partido.id, partido)
+      .pipe(
+        retry(1),
+        catchError(this.handleError),
+      );
+  }
 
   handleError(error) {
     let errorMessage = '';
